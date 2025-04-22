@@ -2,32 +2,51 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script language="javascript" src="script.js" defer></script>
-    <title>Jogo da Velha</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Tic Tac Toe | BR</title>
 </head>
 
 <body>
-    <div id="placar">
-        <div id="fundoLabel"></div>
-        <label id="labelX" for="pontosX">X</label>
-        <label id="labelO" for="pontosO">O</label>
-        <div class="pontos" id="pontosX">0</div>
-        <div class="pontos" id="pontosO">0</div>
-    </div>
-    <div id="tabuleiro">
-        <div class="casas" id="casa1"></div>
-        <div class="casas" id="casa2"></div>
-        <div class="casas" id="casa3"></div>
-        <div class="casas" id="casa4"></div>
-        <div class="casas" id="casa5"></div>
-        <div class="casas" id="casa6"></div>
-        <div class="casas" id="casa7"></div>
-        <div class="casas" id="casa8"></div>
-        <div class="casas" id="casa9"></div>
-    </div>
+    <header></header>
+
+    <main>
+        <section id="score">
+            <div id="board">
+                <div id="pontuation">
+                    <strong id="pointsX" title="X">0</strong>
+                    <strong id="pointsO" title="O">0</strong>
+                </div>
+                <div id="player">
+                    <div id="nextPlayer">
+                        <strong id="nextPlayerX">X</strong>
+                        <strong id="nextPlayerO">O</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gameBoard">
+            <div id="area">
+                <span id="squareA1" class="squares"><strong></strong></span>
+                <span id="squareA2" class="squares"><strong></strong></span>
+                <span id="squareA3" class="squares"><strong></strong></span>
+                <span id="squareB1" class="squares"><strong></strong></span>
+                <span id="squareB2" class="squares"><strong></strong></span>
+                <span id="squareB3" class="squares"><strong></strong></span>
+                <span id="squareC1" class="squares"><strong></strong></span>
+                <span id="squareC2" class="squares"><strong></strong></span>
+                <span id="squareC3" class="squares"><strong></strong></span>
+            </div>
+        </section>
+    </main>
+
+    <section id="contextMenu">
+        <span id="resetButton">Reiniciar Jogo</span>
+    </section>
+    <footer></footer>
 </body>
 
 </html>

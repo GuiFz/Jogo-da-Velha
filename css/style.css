@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*::selection {
+    background-color: transparent;
+
+}
+
+body {
+    font-family: 'Lato', Helvetica;
+
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+
+    background-color: #000;
+}
+
+main {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+#gameBoard {
+    display: flex;
+
+    width: 50%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #111;
+}
+
+#score {
+    display: flex;
+
+    width: 50%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+
+    width: 55%;
+    height: 40%;
+
+    padding: 2%;
+
+    background-color: #111;
+
+    border-radius: 10px;
+}
+
+#pontuation {
+    display: flex;
+
+    height: 50%;
+
+    justify-content: space-around;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+#pontuation>* {
+    display: flex;
+
+    width: 40%;
+    height: 90%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 6px solid #FFF;
+    border-radius: 2px;
+
+    font-size: 6rem;
+
+    color: #EEE;
+
+    transition: 300ms;
+}
+
+#player {
+    display: flex;
+
+    height: 50%;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+#nextPlayer {
+    display: flex;
+    flex-direction: row;
+
+    width: 91%;
+    height: 60%;
+
+    justify-content: space-between;
+
+    background-color: #EEE;
+    border-radius: 4px;
+}
+
+#nextPlayer>* {
+    display: flex;
+
+    width: 45%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 4rem;
+    color: #000;
+
+}
+
+#area {
+    display: grid;
+
+    width: 60%;
+    height: 70%;
+
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+}
+
+.squares {
+    display: flex;
+
+    min-height: 100px;
+    height: 95%;
+
+    margin: 3%;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #EEE;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: 300ms;
+}
+
+.squares strong {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    scale: 5;
+}
+
+.checkedSquare {
+    color: #EEE;
+    background-color: #4AE;
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.next {
+    border-color: #4AE !important;
+}
+
+#contextMenu {
+    display: none;
+    position: absolute;
+
+    width: 12%;
+    height: 5%;
+
+    z-index: 10;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #000;
+
+    border: 2px solid #FFF;
+    border-radius: 5px;
+}
+
+#resetButton {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+
+    color: #FFF;
+    cursor: pointer;
+}
+
+/* ***********  RESPONSIVE *********** */
+
+/* 1920 px responsive: OK */
+/* 1536 px responsive: OK */
+/* 1366 px responsive: OK */
+
+/* 470 px */
+@media screen and (max-width: 470px) {
+    main {
+        flex-direction: column;
+    }
+
+    #gameBoard {
+        width: 100%;
+        height: 100%;
+    }
+
+    #score {
+        width: 100%;
+        height: 100%;
+    }
+
+    #board {
+        width: 80%;
+        height: 60%;
+    }
+
+    #area {
+        width: 80%;
+        height: 70%;
+
+    }
+}
+
+@media screen and (max-width: 970px) {
+    main {
+        flex-direction: column;
+    }
+
+    #gameBoard {
+        width: 100%;
+        height: 100%;
+    }
+
+    #score {
+        width: 100%;
+        height: 100%;
+    }
+
+    #board {
+        width: 70%;
+        height: 60%;
+
+        margin-top: 10%;
+    }
+
+    #area {
+        width: 60%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    #gameBoard {
+        width: 100%;
+        height: 100%;
+    }
+
+    #score {
+        width: 100%;
+        height: 100%;
+    }
+
+    .squares {
+        max-height: 270px;
+    }
+
+    #board {
+        width: 70%;
+        height: 40%;
+    }
+
+    #area {
+        width: 80%;
+        height: 60%;
+    }
+}
